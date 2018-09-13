@@ -32,9 +32,20 @@ module.exports = {
   module: {
     rules: [
       {
-          test: /\.css$/,
-          use: ['style-loader', 'css-loader']
-        },
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(png|gif|jp(e*)g|svg)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 8000,
+            name: 'images/[hash]-[name].[ext]'
+          }
+        }
+      },
+
       {
         test: /\.jsx?$/,
         loader: "babel-loader",
