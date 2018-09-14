@@ -7,7 +7,7 @@ function Tamagotchi(props){
       <p>Name: {props.name}</p>
       <p>Food:{props.food}</p>
       <p>Attention: {props.attention}</p>
-      <p>Sleep: {props.sleep}</p>
+      <p>Rest: {props.rest}</p>
     </div>
   );
 }
@@ -16,7 +16,7 @@ Tamagotchi.propTypes = {
   name: PropTypes.string,
   food: PropTypes.number,
   attention: PropTypes.number,
-  sleep: PropTypes.number
+  rest: PropTypes.number
 };
 
 export default Tamagotchi;

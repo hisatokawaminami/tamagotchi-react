@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 function NewTamagotchiForm(props){
   let _name = null;
-  
+
   function handleNameSubmission(event) {
     event.preventDefault();
-    props.onNewTamagotchiCreation({name: _name.value});
+    props.onNewTamagotchiCreation({name: _name.value, food: 100, attention: 100, rest: 100});
     _name.value = '';
   }
   return (

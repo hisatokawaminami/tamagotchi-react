@@ -10,7 +10,16 @@ class App extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      masterList: []
+      masterList: [
+        {
+        name: "test",
+        food: 100,
+        attention: 100,
+        rest: 100
+        }
+
+
+      ]
     };
     this.handleAddingNewTamagotchiToList = this.handleAddingNewTamagotchiToList.bind(this);
   }
@@ -20,14 +29,14 @@ class App extends React.Component{
     newMasterList.push(newTamagotchi);
     this.setState({masterList: newMasterList});
   }
-  
+
   render(){
     return(
       <div>
         <Header/>
         <Switch>
           <Route exact path='/' render={()=><TamagotchiList tamagotchiList={this.state.masterList} />} />
-          <Route path='/newtamagotchi' render={()=><NewTamagotchiForm onNewTamagotchi={this.handleAddingNewTamagotchiToList} />} />
+          <Route path='/newtamagotchi' render={()=><NewTamagotchiForm onNewTamagotchiCreation={this.handleAddingNewTamagotchiToList} />} />
         </Switch>
       </div>
     );
