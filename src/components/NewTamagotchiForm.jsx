@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { v4 } from 'uuid';
 
 function NewTamagotchiForm(props){
   let _name = null;
 
   function handleNameSubmission(event) {
     event.preventDefault();
-    props.onNewTamagotchiCreation({name: _name.value, food: 100, attention: 100, rest: 100});
+    props.onNewTamagotchiCreation({name: _name.value, food: 85, attention: 85, rest: 85, id: v4()});
     _name.value = '';
   }
   return (
