@@ -7,10 +7,10 @@ function Header(){
     <div>
       <h1>Tamagotchi</h1>
       <Link to="/">Home</Link> | <Link to="/newtamagotchi">Create Tamagotchi</Link>
-        <hr/>
-<br/>
-        <img src={tamagotchiGif}/>
-    <hr/>
+      <hr/>
+      <br/>
+      <img src={tamagotchiGif}/>
+      <hr/>
     </div>
   );
 }

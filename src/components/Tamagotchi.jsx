@@ -13,10 +13,10 @@ function Tamagotchi(props){
 }
 
 Tamagotchi.propTypes = {
-  name: PropTypes.string.isRequired,
-  food: PropTypes.number.isRequired,
-  attention: PropTypes.number.isRequired,
-  sleep: PropTypes.number.isRequired
+  name: PropTypes.string,
+  food: PropTypes.number,
+  attention: PropTypes.number,
+  sleep: PropTypes.number
 };
 
 export default Tamagotchi;
